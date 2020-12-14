@@ -1,7 +1,7 @@
 import os
 import re
 import json
-from lib.utm import Convert_LL2UTM
+from lib.utm import Convert_LL2UTM as utm
 
 loc = []
 
@@ -13,5 +13,5 @@ for line in open("data/data.txt"):
         loc.append(match)
 x = loc[0]
 # print(str(x).split(","))
-utms = Convert_LL2UTM(str(x).split(","))
+utms = utm(str(x).split(","))
 print(utms)
